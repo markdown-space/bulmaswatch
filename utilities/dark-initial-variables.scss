@@ -1,3 +1,5 @@
+$bulmaswatch-import-font: true !default;
+
 // Scheme Hue and Saturation
 
 $scheme-h: 221;
@@ -19,7 +21,7 @@ $grey-lighter: hsl(221, 14%, 86%) !default;
 $grey-lightest: hsl(221, 14%, 93%) !default;
 
 $white-ter: hsl(221, 14%, 96%) !default;
-$white-bis: hsl(210, 20%, 98%) !default;
+$white-bis: hsl(221, 14%, 98%) !default;
 $white: hsl(221, 14%, 100%) !default;
 
 $orange: hsl(14, 100%, 53%) !default;
@@ -153,3 +155,13 @@ $class-prefix: "" !default;
 $cssvars-prefix: "bulma-" !default;
 $helpers-prefix: "is-" !default;
 $helpers-has-prefix: "has-" !default;
+
+
+//ADDED DEFAULTS
+$button-background-color: $blue !default;
+$input-focus-border-color: $blue !default;
+$input-focus-box-shadow-color: $blue !default;
+
+$navbar-breakpoint: $desktop !default;
+$link-hover: $blue !default;
+$link-focus: $blue !default;
