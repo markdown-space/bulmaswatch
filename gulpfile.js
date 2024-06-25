@@ -21,7 +21,7 @@ const CDN = "https://unpkg.com/bulmaswatch";
 var changedTheme = "";
 
 gulp.task("clean", async function () {
-  await deleteAsync(["*/*.css", "*/*.css.map"]);
+  await deleteAsync(["dist/**/*.css", "dist/**/*.css.map", "*.min.css"]);
 });
 
 gulp.task("jekyll-build", function (done) {
@@ -59,13 +59,13 @@ gulp.task("sass:dev", function () {
       })
     )
     .pipe(sourcemaps.write("./"))
-    .pipe(gulp.dest(changedTheme ? `_site/${changedTheme}` : "_site/"))
+    .pipe(gulp.dest("dist/"))
     .pipe(
       browserSync.reload({
         stream: true,
       })
     )
-    .pipe(gulp.dest(changedTheme ? `_site/${changedTheme}` : "."));
+    .pipe(gulp.dest(changedTheme ? `_site/${changedTheme}` : "_site/"));
 });
 
 gulp.task(
@@ -127,7 +127,7 @@ gulp.task(
       .pipe(autoprefixer())
       .pipe(csso())
       .pipe(sourcemaps.write("."))
-      .pipe(gulp.dest("."));
+      .pipe(gulp.dest("dist"));
   })
 );
 
@@ -178,7 +178,7 @@ gulp.task("api", function () {
     .pipe(
       data(function (file) {
         API.themes = file.meta;
-        file.contents = new Buffer(JSON.stringify(API));
+        file.contents = Buffer.from(JSON.stringify(API));
       })
     )
     .pipe(gulp.dest("api"));
