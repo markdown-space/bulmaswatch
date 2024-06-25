@@ -19,11 +19,11 @@ $text-strong: iv.$grey-darker !default;
 
 // Status colors
 
-$primary: #4050b5 !default;
-$info: #2bb6f6 !default;
-$success: #4caf50 !default;
-$warning: #ffeb3b !default;
-$danger: #f44336 !default;
+$primary: iv.$turquoise !default;
+$info: iv.$cyan !default;
+$success: iv.$green !default;
+$warning: iv.$yellow !default;
+$danger: iv.$red !default;
 $light: iv.$white-ter !default;
 $dark: iv.$grey-darker !default;
 
@@ -46,12 +46,9 @@ $pre: $text !default;
 $pre-background: $background !default;
 
 // Typography
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
-$family-primary: "Roboto", "Inter", "SF Pro", "Segoe UI", "Oxygen", "Ubuntu",
-  "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
-$family-secondary: "Roboto", "Inter", "SF Pro", "Segoe UI", "Oxygen", "Ubuntu",
-  "Helvetica Neue", "Helvetica", "Arial", sans-serif !default;
+$family-primary: iv.$family-sans-serif !default;
+$family-secondary: iv.$family-sans-serif !default;
 $family-code: iv.$family-monospace !default;
 
 $size-small: iv.$size-7 !default;
