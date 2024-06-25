@@ -1,0 +1,9 @@
+@use "materia";
+@use "setup";
+@import "bulma";
+
+
+:root {
+    @include materia.light-theme;
+    @include setup.setup-theme;
+  }
