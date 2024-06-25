@@ -1,0 +1,67 @@
+// Overrides
+@use "initial-variables" as iv;
+
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
+
+body {
+  font-weight: 200;
+  letter-spacing: 1px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.button {
+  transition: all 200ms ease;
+  text-transform: uppercase;
+  font-weight: 700;
+
+  &.is-active,
+  &.is-focused,
+  &:active,
+  &:focus {
+    box-shadow: 0 0 0 2px rgba(transparent, 0.25);
+  }
+}
+
+.input,
+.textarea {
+  transition: all 200ms ease;
+  box-shadow: none;
+}
+
+.progress,
+.tag {
+  border-radius: 0;
+}
+
+.card {
+  box-shadow: 0 0 0 1px iv.$grey-lighter;
+
+  .card-header {
+    box-shadow: 0 1px 0 0 iv.$grey-lighter;
+  }
+}
+
+.navbar {
+  .navbar-link,
+  .navbar-item {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .has-dropdown .navbar-item {
+    text-transform: none;
+  }
+
+  strong {
+    color: iv.$white;
+  }
+}

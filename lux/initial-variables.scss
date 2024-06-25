@@ -35,9 +35,6 @@ $cyan: hsl(198, 100%, 70%) !default;
 $purple: hsl(271, 100%, 71%) !default;
 // $red: hsl(348, 100%, 70%) !default;
 
-// Typography
-@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
-
 $family-sans-serif: "Nunito Sans", -apple-system, system-ui, BlinkMacSystemFont,
   "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 $family-monospace: "Inconsolata", "Hack", "SF Mono", "Roboto Mono",
@@ -52,18 +49,12 @@ $size-5: 1.25rem !default;
 $size-6: 1rem !default;
 $size-7: 0.75rem !default;
 
-// $weight-light: 300 !default;
-// $weight-normal: 400 !default;
-// $weight-medium: 500 !default;
-// $weight-semibold: 600 !default;
-// $weight-bold: 700 !default;
-// $weight-extrabold: 800 !default;
-$weight-light: 400 !default;
+$weight-light: 300 !default;
 $weight-normal: 400 !default;
-$weight-medium: 400 !default;
-$weight-semibold: 400 !default;
-$weight-bold: 400 !default;
-$weight-extrabold: 400 !default;
+$weight-medium: 500 !default;
+$weight-semibold: 600 !default;
+$weight-bold: 700 !default;
+$weight-extrabold: 800 !default;
 
 // Spacing
 

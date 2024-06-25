@@ -1,11 +1,11 @@
 @use "lux";
 @use "setup";
+@use "overrides";
 
 /*! bulmaswatch v0.8.1 | MIT License */
 @import "bulma";
 
-
 :root {
-    @include lux.light-theme;
-    @include setup.setup-theme;
-  }
+  @include lux.light-theme;
+  @include setup.setup-theme;
+}
