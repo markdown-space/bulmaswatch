@@ -1,6 +1,6 @@
 // Overrides
-@use "initial-variables" as iv;
-@use "derived-variables" as dv;
+@import "derived-variables";
+@import "initial-variables";
 
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
 
@@ -36,7 +36,7 @@ h6 {
   &:focus {
     box-shadow: 0 0 0 2px rgba($button-focus-border-color, 0.25);
   }
-  @each $name, $pair in dv.$colors {
+  @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: nth($pair, 1);
 
@@ -64,10 +64,10 @@ h6 {
 }
 
 .card {
-  box-shadow: 0 0 0 1px iv.$grey-lighter;
+  box-shadow: 0 0 0 1px $grey-lighter;
 
   .card-header {
-    box-shadow: 0 1px 0 0 iv.$grey-lighter;
+    box-shadow: 0 1px 0 0 $grey-lighter;
   }
 }
 
@@ -83,16 +83,20 @@ h6 {
   }
 
   strong {
-    color: iv.$white;
+    color: $white;
   }
 }
 .hero {
   .navbar {
     background-color: #fff;
   }
-  @each $name, $pair in dv.$colors {
+  @each $name, $pair in $colors {
     $color: nth($pair, 1);
-    $color-invert: nth($pair, 1);
+    $color-invert: if(
+      length($pair) > 1,
+      nth($pair, 2),
+      $color
+    ); // default to $color if second element is not present
 
     &.is-#{$name} {
       .navbar {
@@ -103,9 +107,13 @@ h6 {
 }
 
 .notification {
-  @each $name, $pair in dv.$colors {
+  @each $name, $pair in $colors {
     $color: nth($pair, 1);
-    $color-invert: nth($pair, 1);
+    $color-invert: if(
+      length($pair) > 1,
+      nth($pair, 2),
+      $color
+    ); // default to $color if second element is not present
 
     &.is-#{$name} {
       a:not(.button) {

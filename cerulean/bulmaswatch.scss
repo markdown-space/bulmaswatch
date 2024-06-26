@@ -1,0 +1,12 @@
+@use "cerulean";
+@use "setup";
+@use "overrides";
+
+/*! bulmaswatch v0.8.1 | MIT License */
+@import "bulma";
+@import "initial-variables";
+
+:root {
+  @include cerulean.dark-theme;
+  @include setup.setup-theme;
+}
