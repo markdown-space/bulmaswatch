@@ -1,7 +1,14 @@
 // Overrides
 @use "initial-variables" as iv;
+@use "derived-variables" as dv;
 
 @import url("https://fonts.googleapis.com/css?family=Nunito+Sans&display=swap");
+
+$button-border-color: transparent;
+$button-hover-border: transparent;
+$button-focus-border-color: transparent;
+$button-active-border-color: transparent;
+$radius: 0;
 
 body {
   font-weight: 200;
@@ -27,7 +34,21 @@ h6 {
   &.is-focused,
   &:active,
   &:focus {
-    box-shadow: 0 0 0 2px rgba(transparent, 0.25);
+    box-shadow: 0 0 0 2px rgba($button-focus-border-color, 0.25);
+  }
+  @each $name, $pair in dv.$colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 1);
+
+    &.is-#{$name} {
+      &.is-active,
+      &.is-focused,
+      &:active,
+      &:focus {
+        border-color: $color;
+        box-shadow: 0 0 0 2px rgba($color, 0.25);
+      }
+    }
   }
 }
 
@@ -39,7 +60,7 @@ h6 {
 
 .progress,
 .tag {
-  border-radius: 0;
+  border-radius: $radius;
 }
 
 .card {
@@ -63,5 +84,34 @@ h6 {
 
   strong {
     color: iv.$white;
+  }
+}
+.hero {
+  .navbar {
+    background-color: #fff;
+  }
+  @each $name, $pair in dv.$colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 1);
+
+    &.is-#{$name} {
+      .navbar {
+        background-color: $color;
+      }
+    }
+  }
+}
+
+.notification {
+  @each $name, $pair in dv.$colors {
+    $color: nth($pair, 1);
+    $color-invert: nth($pair, 1);
+
+    &.is-#{$name} {
+      a:not(.button) {
+        color: $color-invert;
+        text-decoration: underline;
+      }
+    }
   }
 }
