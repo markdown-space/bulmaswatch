@@ -24,23 +24,18 @@
 }
 
 .title {
+  font-weight: 500 !important;
   color: $primary-dark !important;
 }
 
-.button.is-inverted {
-  background-color: #fff !important;
+.subtitle {
+  font-weight: 300 !important;
 }
 
 .button {
-  color: #fff;
-
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
-    $color-invert: if(
-      length($pair) > 1,
-      nth($pair, 2),
-      $color
-    ); // default to $color if second element is not present
+    $color-invert: nth($pair, 1);
     &.is-#{$name} {
       &:not(.is-outlined):not(.is-inverted) {
         @include btn-gradient($color);
