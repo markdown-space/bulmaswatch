@@ -33,9 +33,11 @@
 }
 
 .button {
+  font-weight: 400 !important;
+
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
-    $color-invert: nth($pair, 1);
+    $color-invert: nth($pair, 2);
     &.is-#{$name} {
       &:not(.is-outlined):not(.is-inverted) {
         @include btn-gradient($color);
