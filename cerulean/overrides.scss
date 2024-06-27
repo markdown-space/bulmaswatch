@@ -13,7 +13,27 @@
   );
 }
 
+.hero.is-primary {
+  .title {
+    color: #fff !important;
+  }
+
+  .subtitle {
+    color: #fff !important;
+  }
+}
+
+.title {
+  color: $primary-dark !important;
+}
+
+.button.is-inverted {
+  background-color: #fff !important;
+}
+
 .button {
+  color: #fff;
+
   @each $name, $pair in $colors {
     $color: nth($pair, 1);
     $color-invert: if(
