@@ -2,6 +2,8 @@
 // CERULEAN
 ////////////////////////////////////////////////
 
+@use "../utilities/functions.scss" as fn;
+@import "../utilities/derived-variables.scss";
 @import "../utilities/light-initial-variables.scss";
 
 $grey-accent: hsl(0, 0%, 14%);
@@ -27,7 +29,7 @@ $purple: #7e5ea3;
 $red: #c71c22;
 $grey: #dbdbdb;
 
-$primary: #2fa4e7 !default;
+$primary: #2fa4e7;
 $primary-dark: #317eac;
 $warning: $orange;
 $info: #d8dce0;
@@ -48,3 +50,53 @@ $subtitle-strong-color: 500;
 $box-shadow: 0 0 0 1px $grey;
 
 $control-height: 2.375em;
+
+$colors: fn.mergeColorMaps(
+  (
+    "white": (
+      $white,
+      $black,
+    ),
+    "black": (
+      $black,
+      $white,
+    ),
+    "light": (
+      $light,
+      $dark,
+    ),
+    "dark": (
+      $dark,
+      $light,
+    ),
+    "text": (
+      transparent,
+      $dark,
+    ),
+    "primary": (
+      $primary,
+      $light,
+    ),
+    "link": (
+      #033c73,
+      $light,
+    ),
+    "info": (
+      $info,
+      $dark,
+    ),
+    "success": (
+      $success,
+      $light,
+    ),
+    "warning": (
+      $warning,
+      $light,
+    ),
+    "danger": (
+      $danger,
+      $light,
+    ),
+  ),
+  $custom-colors
+);

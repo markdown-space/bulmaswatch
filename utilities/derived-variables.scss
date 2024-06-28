@@ -1,5 +1,5 @@
-@use "initial-variables" as iv;
-@use "../utilities/functions" as fn;
+@use "light-initial-variables" as iv;
+@use "functions" as fn;
 
 // Scheme colors
 
@@ -12,17 +12,14 @@ $scheme-invert-ter: iv.$black-ter !default;
 
 // Text colors
 
-$text-l: 71%;
-
-$text: #4a4a4a;
+$text: iv.$grey-dark !default;
 $text-invert: fn.bulmaFindColorInvert($text) !default;
 $text-weak: iv.$grey !default;
 $text-strong: iv.$grey-darker !default;
 
 // Status colors
 
-$primary: iv.$primary !default;
-$primary-dark: iv.$primary-dark !default;
+$primary: iv.$turquoise !default;
 $info: iv.$cyan !default;
 $success: iv.$green !default;
 $warning: iv.$yellow !default;
@@ -85,34 +82,13 @@ $colors: fn.mergeColorMaps(
       $dark,
       $light,
     ),
-    "text": (
-      transparent,
-      $dark,
-    ),
-    "primary": (
-      $primary,
-      $light,
-    ),
-    "link": (
-      #033c73,
-      $light,
-    ),
-    "info": (
-      $info,
-      $dark,
-    ),
-    "success": (
-      $success,
-      $light,
-    ),
-    "warning": (
-      $warning,
-      $light,
-    ),
-    "danger": (
-      $danger,
-      $light,
-    ),
+    "text": $text,
+    "primary": $primary,
+    "link": $link,
+    "info": $info,
+    "success": $success,
+    "warning": $warning,
+    "danger": $danger,
   ),
   $custom-colors
 ) !default;

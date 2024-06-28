@@ -1,7 +1,7 @@
 // Overrides
-@import "initial-variables";
-@import "derived-variables";
+@import "../utilities/derived-variables";
 @import "../utilities/mixins.scss";
+@import "initial-variables";
 
 // Overrides
 @mixin btn-gradient($color) {
@@ -165,6 +165,7 @@
       nth($pair, 2),
       $color
     ); // default to $color if second element is not present
+
     &.is-#{$name} {
       .navbar {
         @include btn-gradient($color);
