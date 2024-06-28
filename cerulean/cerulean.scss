@@ -1,10 +1,10 @@
 @use "sass:list";
 
-@use "css-variables" as cv;
+@use "../utilities/css-variables" as cv;
 @use "derived-variables" as dv;
 @use "initial-variables" as iv;
-@use "functions" as fn;
-@use "setup";
+@use "../utilities/functions.scss" as fn;
+@use "../utilities/setup";
 
 // The main lightness of this theme
 $scheme-main-l: 100%;

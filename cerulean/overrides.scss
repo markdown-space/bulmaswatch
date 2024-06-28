@@ -1,7 +1,7 @@
 // Overrides
 @import "initial-variables";
 @import "derived-variables";
-@import "mixins";
+@import "../utilities/mixins.scss";
 
 // Overrides
 @mixin btn-gradient($color) {
