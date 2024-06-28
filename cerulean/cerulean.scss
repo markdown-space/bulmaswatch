@@ -1,9 +1,9 @@
 @use "sass:list";
 
 @use "../utilities/css-variables" as cv;
-@use "../utilities/derived-variables" as dv;
 @use "../utilities/functions.scss" as fn;
 @use "../utilities/setup";
+@use "derived-variables" as dv;
 @use "initial-variables" as iv;
 
 // The main lightness of this theme
