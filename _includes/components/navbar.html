@@ -1,23 +1,39 @@
 <section class="section" id="navbar">
   <h1 class="title">Navbar</h1>
-  <hr>
+  <hr />
   {% for m in page.modifiers %}
   <nav class="navbar {% if m != '' %}is-{{m}}{% endif %}">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
-        <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+        <img
+          src="https://files.markdown.space/d11d5afa-6393-42e4-9912-893aa419896c/vali-ventures-horizontal.svg"
+          alt="Bulma: a modern CSS framework based on Flexbox"
+          width="112"
+          height="28"
+        />
       </a>
-      <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
-        <span class="icon" style="color: #333;">
+      <a
+        class="navbar-item is-hidden-desktop"
+        href="https://github.com/jgthms/bulma"
+        target="_blank"
+      >
+        <span class="icon" style="color: #333">
           <i class="fab fa-github"></i>
         </span>
       </a>
-      <a class="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" target="_blank">
-        <span class="icon" style="color: #55acee;">
+      <a
+        class="navbar-item is-hidden-desktop"
+        href="https://twitter.com/jgthms"
+        target="_blank"
+      >
+        <span class="icon" style="color: #55acee">
           <i class="fab fa-twitter"></i>
         </span>
       </a>
-      <div class="navbar-burger burger" data-target="navMenuExample{{forloop.index}}">
+      <div
+        class="navbar-burger burger"
+        data-target="navMenuExample{{forloop.index}}"
+      >
         <span></span>
         <span></span>
         <span></span>
@@ -25,48 +41,33 @@
     </div>
     <div id="navMenuExample{{forloop.index}}" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item " href="#">
-          Home
-        </a>
+        <a class="navbar-item" href="#"> Home </a>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link  is-active" href="#">
-            Docs
-          </a>
-          <div class="navbar-dropdown ">
-            <a class="navbar-item " href="#">
-              Overview
-            </a>
-            <a class="navbar-item " href="#">
-              Modifiers
-            </a>
-            <a class="navbar-item " href="#">
-              Grid
-            </a>
-            <a class="navbar-item " href="#">
-              Form
-            </a>
-            <a class="navbar-item " href="#">
-              Elements
-            </a>
-            <a class="navbar-item is-active" href="#">
-              Components
-            </a>
-            <a class="navbar-item " href="#">
-              Layout
-            </a>
-            <hr class="navbar-divider">
+          <a class="navbar-link is-active" href="#"> Docs </a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#"> Overview </a>
+            <a class="navbar-item" href="#"> Modifiers </a>
+            <a class="navbar-item" href="#"> Grid </a>
+            <a class="navbar-item" href="#"> Form </a>
+            <a class="navbar-item" href="#"> Elements </a>
+            <a class="navbar-item is-active" href="#"> Components </a>
+            <a class="navbar-item" href="#"> Layout </a>
+            <hr class="navbar-divider" />
             <div class="navbar-item">
-              <div>version
+              <div>
+                version
                 <p class="has-text-info is-size-6-desktop">0.4.3</p>
               </div>
             </div>
           </div>
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link " href="#blog/">
-            Blog
-          </a>
-          <div id="blogDropdown" class="navbar-dropdown " data-style="width: 18rem;">
+          <a class="navbar-link" href="#blog/"> Blog </a>
+          <div
+            id="blogDropdown"
+            class="navbar-dropdown"
+            data-style="width: 18rem;"
+          >
             <a class="navbar-item" href="/2017/03/10/new-field-element/">
               <div class="navbar-content">
                 <p>
@@ -75,7 +76,10 @@
                 <p>New field element (for better controls)</p>
               </div>
             </a>
-            <a class="navbar-item" href="/2016/04/11/metro-ui-css-grid-with-bulma-tiles/">
+            <a
+              class="navbar-item"
+              href="/2016/04/11/metro-ui-css-grid-with-bulma-tiles/"
+            >
               <div class="navbar-content">
                 <p>
                   <small class="has-text-info">11 Apr 2016</small>
@@ -83,7 +87,10 @@
                 <p>Metro UI CSS grid with Bulma tiles</p>
               </div>
             </a>
-            <a class="navbar-item" href="/2016/02/09/blog-launched-new-responsive-columns-new-helpers/">
+            <a
+              class="navbar-item"
+              href="/2016/02/09/blog-launched-new-responsive-columns-new-helpers/"
+            >
               <div class="navbar-content">
                 <p>
                   <small class="has-text-info">09 Feb 2016</small>
@@ -91,10 +98,8 @@
                 <p>Blog launched, new responsive columns, new helpers</p>
               </div>
             </a>
-            <a class="navbar-item" href="#blog/">
-              More posts
-            </a>
-            <hr class="navbar-divider">
+            <a class="navbar-item" href="#blog/"> More posts </a>
+            <hr class="navbar-divider" />
             <div class="navbar-item">
               <div class="navbar-content">
                 <div class="level is-mobile">
@@ -119,17 +124,15 @@
           </div>
         </div>
         <div class="navbar-item has-dropdown is-hoverable">
-          <div class="navbar-link">
-            More
-          </div>
-          <div id="moreDropdown" class="navbar-dropdown ">
-            <a class="navbar-item " href="#extensions/">
+          <div class="navbar-link">More</div>
+          <div id="moreDropdown" class="navbar-dropdown">
+            <a class="navbar-item" href="#extensions/">
               <div class="level is-mobile">
                 <div class="level-left">
                   <div class="level-item">
                     <p>
                       <strong>Extensions</strong>
-                      <br>
+                      <br />
                       <small>Side projects to enhance Bulma</small>
                     </p>
                   </div>
@@ -140,10 +143,18 @@
         </div>
       </div>
       <div class="navbar-end">
-        <a class="navbar-item" href="https://github.com/jgthms/bulma" target="_blank">
+        <a
+          class="navbar-item"
+          href="https://github.com/jgthms/bulma"
+          target="_blank"
+        >
           Github
         </a>
-        <a class="navbar-item" href="https://twitter.com/jgthms" target="_blank">
+        <a
+          class="navbar-item"
+          href="https://twitter.com/jgthms"
+          target="_blank"
+        >
           Twitter
         </a>
         <div class="navbar-item">
@@ -154,7 +165,10 @@
               </a>
             </p>
             <p class="control">
-              <a class="button is-primary" href="https://github.com/jgthms/bulma/archive/0.4.3.zip">
+              <a
+                class="button is-primary"
+                href="https://github.com/jgthms/bulma/archive/0.4.3.zip"
+              >
                 <span class="icon">
                   <i class="fa fa-download"></i>
                 </span>
@@ -166,21 +180,34 @@
       </div>
     </div>
   </nav>
-  <br>
+  <br />
   {% endfor %}
   <h2 class="subtitle">Transparent</h2>
   <nav class="navbar is-transparent">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://bulma.io">
-        <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+        <img
+          src="https://files.markdown.space/d11d5afa-6393-42e4-9912-893aa419896c/vali-ventures-horizontal.svg"
+          alt="Bulma: a modern CSS framework based on Flexbox"
+          width="112"
+          height="28"
+        />
       </a>
-      <a class="navbar-item is-hidden-desktop" href="https://github.com/jgthms/bulma" target="_blank">
-        <span class="icon" style="color: #333;">
+      <a
+        class="navbar-item is-hidden-desktop"
+        href="https://github.com/jgthms/bulma"
+        target="_blank"
+      >
+        <span class="icon" style="color: #333">
           <i class="fab fa-github"></i>
         </span>
       </a>
-      <a class="navbar-item is-hidden-desktop" href="https://twitter.com/jgthms" target="_blank">
-        <span class="icon" style="color: #55acee;">
+      <a
+        class="navbar-item is-hidden-desktop"
+        href="https://twitter.com/jgthms"
+        target="_blank"
+      >
+        <span class="icon" style="color: #55acee">
           <i class="fab fa-twitter"></i>
         </span>
       </a>
@@ -192,23 +219,16 @@
     </div>
     <div id="navMenuExamplet" class="navbar-menu">
       <div class="navbar-start">
-        <a class="navbar-item " href="#">
-          Home
-        </a>
+        <a class="navbar-item" href="#"> Home </a>
         <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link  is-active" href="#">
-            Docs
-          </a>
+          <a class="navbar-link is-active" href="#"> Docs </a>
           <div class="navbar-dropdown is-boxed">
-            <a class="navbar-item " href="#">
-              Overview
-            </a>
-            <a class="navbar-item " href="#">
-              Discover
-            </a>
-            <hr class="navbar-divider">
+            <a class="navbar-item" href="#"> Overview </a>
+            <a class="navbar-item" href="#"> Discover </a>
+            <hr class="navbar-divider" />
             <div class="navbar-item">
-              <div>version
+              <div>
+                version
                 <p class="has-text-info is-size-6-desktop">0.4.3</p>
               </div>
             </div>
@@ -216,7 +236,11 @@
         </div>
       </div>
       <div class="navbar-end">
-        <a class="navbar-item" href="https://github.com/jgthms/bulma" target="_blank">
+        <a
+          class="navbar-item"
+          href="https://github.com/jgthms/bulma"
+          target="_blank"
+        >
           Github
         </a>
         <div class="navbar-item">
@@ -227,7 +251,10 @@
               </a>
             </p>
             <p class="control">
-              <a class="button is-primary" href="https://github.com/jgthms/bulma/archive/0.4.3.zip">
+              <a
+                class="button is-primary"
+                href="https://github.com/jgthms/bulma/archive/0.4.3.zip"
+              >
                 <span class="icon">
                   <i class="fa fa-download"></i>
                 </span>
