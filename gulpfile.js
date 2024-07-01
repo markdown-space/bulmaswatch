@@ -115,7 +115,7 @@ gulp.task(
       .src("*/*.scss")
       .pipe(sourcemaps.init())
       .pipe(
-        sass({
+        nodeSass({
           includePaths: "node_modules/bulma",
         }).on("error", sass.logError)
       )
