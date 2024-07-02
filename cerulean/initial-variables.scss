@@ -4,6 +4,7 @@
 
 @use "../utilities/functions.scss" as fn;
 @import "../utilities/light-initial-variables.scss";
+@import "../utilities/derived-variables.scss";
 
 $grey-accent: hsl(0, 0%, 14%);
 $grey-darker: hsl(0, 0%, 21%);
@@ -27,6 +28,8 @@ $blue: #033c73;
 $purple: #7e5ea3;
 $red: #c71c22;
 $grey: #dbdbdb;
+$danger: $red;
+$success: $green;
 
 $primary: #2fa4e7;
 $primary-dark: #317eac;
@@ -49,3 +52,53 @@ $subtitle-strong-color: 500;
 $box-shadow: 0 0 0 1px $grey;
 
 $control-height: 2.375em;
+
+$my-colors: fn.mergeColorMaps(
+  (
+    "white": (
+      $white,
+      $black,
+    ),
+    "black": (
+      $black,
+      $white,
+    ),
+    "light": (
+      $light,
+      $dark,
+    ),
+    "dark": (
+      $dark,
+      $light,
+    ),
+    "text": (
+      transparent,
+      $dark,
+    ),
+    "primary": (
+      $primary,
+      $light,
+    ),
+    "link": (
+      #033c73,
+      $light,
+    ),
+    "info": (
+      $info,
+      $dark,
+    ),
+    "success": (
+      $success,
+      $light,
+    ),
+    "warning": (
+      $warning,
+      $light,
+    ),
+    "danger": (
+      $danger,
+      $light,
+    ),
+  ),
+  $custom-colors
+);

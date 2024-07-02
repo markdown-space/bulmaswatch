@@ -3,7 +3,7 @@
 @use "../utilities/css-variables" as cv;
 @use "../utilities/functions.scss" as fn;
 @use "../utilities/setup";
-@use "derived-variables" as dv;
+@use "../utilities/derived-variables" as dv;
 @use "initial-variables" as iv;
 
 // The main lightness of this theme
@@ -99,7 +99,7 @@ $scheme-main: hsl(iv.$scheme-h, iv.$scheme-s, $scheme-main-l);
   // Colors
   $no-palette: ("white", "black", "light", "dark");
 
-  @each $name, $color in dv.$colors {
+  @each $name, $color in iv.$my-colors {
     $base: $color;
     $invert: null;
     $light: null;
