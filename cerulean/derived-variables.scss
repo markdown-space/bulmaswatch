@@ -14,7 +14,7 @@ $scheme-invert-ter: iv.$black-ter !default;
 
 $text-l: 71%;
 
-$text: #4a4a4a;
+$text: iv.$grey-dark !default;
 $text-invert: fn.bulmaFindColorInvert($text) !default;
 $text-weak: iv.$grey !default;
 $text-strong: iv.$grey-darker !default;

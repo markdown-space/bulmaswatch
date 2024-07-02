@@ -1,45 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <title>
+      {{ page.title }} &bull; {{ site.title }} - {{ site.description }}
+    </title>
+    {% include meta.html %}
+    <link
+      href="{{ site.baseurl }}/{{ page.name | slugify}}/bulmaswatch.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      .hero .container {
+        width: 95%;
+      }
+    </style>
+  </head>
 
-<head>
-  <title> {{ page.title }} &bull; {{ site.title }} - {{ site.description }} </title>
-  {% include meta.html %}
-  <link href="{{ site.baseurl }}/{{ page.name | slugify}}/bulmaswatch.min.css" rel="stylesheet" />
-  <style>
-    .hero .container {
-      width: 95%;
-    }
-  </style>
-</head>
-
-<body class="theme-page">
-  <section >
-    <!-- Hero header: will stick at the top -->
+  <body class="theme-page">
+    <section>
+      <!-- Hero header: will stick at the top -->
       {% include nav.html %}
-    <!-- Hero content: will be in the middle -->
-    <div class="hero is-primary">
-      <div class="hero-body">
-        <div class="container">
-          <h1 class="title">
-            {{ page.name }}
-          </h1>
-          <h2 class="subtitle">
-            {{ page.description }}
-          </h2>
-          <p>
-            <a class="button is-primary is-inverted" href="{{ site.baseurl }}/{{page.name | slugify}}/bulmaswatch.min.css" target="_blank" onclick="ga('send', 'event', 'theme', 'download', '{{page.name}}');">Download</a>
-            <a class="button is-dark" href="{{ site.repo_url }}/tree/gh-pages/{{page.name | slugify}}" target="_blank" onclick="ga('send', 'event', 'theme', 'github', '{{page.name}}');" title="Download from Github">
-              <span class="icon"> <i class="fab fa-github"> </i> </span>
-            </a>
-          </p>
+      <!-- Hero content: will be in the middle -->
+      <div class="hero is-primary">
+        <div class="hero-body fixed-grid has-1-cols">
+          <div class="container grid">
+            <div>
+              <h1 class="title">{{ page.name }}</h1>
+              <h2 class="subtitle">{{ page.description }}</h2>
+            </div>
+            <p>
+              <a
+                class="button is-primary is-inverted"
+                href="{{ site.baseurl }}/{{page.name | slugify}}/bulmaswatch.min.css"
+                target="_blank"
+                onclick="ga('send', 'event', 'theme', 'download', '{{page.name}}');"
+                >Download</a
+              >
+              <a
+                class="button is-dark"
+                href="{{ site.repo_url }}/tree/gh-pages/{{page.name | slugify}}"
+                target="_blank"
+                onclick="ga('send', 'event', 'theme', 'github', '{{page.name}}');"
+                title="Download from Github"
+              >
+                <span class="icon"> <i class="fab fa-github"> </i> </span>
+              </a>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <div class="columns">
+    </section>
+    <div class="columns">
       <div class="column is-2">
         <aside class="menu section">
-          <p class="menu-label"> Elements </p>
+          <p class="menu-label">Elements</p>
           <ul class="menu-list">
             <li>
               <a href="#typography"> Typography </a>
@@ -78,7 +92,7 @@
               <a href="#tag"> Tag </a>
             </li>
           </ul>
-          <p class="menu-label"> Components </p>
+          <p class="menu-label">Components</p>
           <ul class="menu-list">
             <li>
               <a href="#breadcrumb"> Breadcrumb </a>
@@ -123,35 +137,21 @@
         </aside>
       </div>
       <div class="column">
-        {% include elements/typography.html %}
-        {% include elements/box.html %}
-        {% include elements/button.html %}
-        {% include elements/content.html %}
-        {% include elements/delete.html %}
-        {% include elements/form.html %}
-        {% include elements/icon.html %}
-        {% include elements/images.html %}
-        {% include elements/notifications.html %}
-        {% include elements/progress.html %}
-        {% include elements/table.html %}
-        {% include elements/tag.html %}
-        {% include components/breadcrumb.html %}
-        {% include components/hero.html %}
-        {% include components/card.html %}
-        {% include components/dropdown.html %}
-        {% include components/level.html %}
-        {% include components/media.html %}
-        {% include components/menu.html %}
-        {% include components/message.html %}
-        {% include components/modal.html %}
-        {% include components/navbar.html %}
-        {% include components/pagination.html %}
-        {% include components/panel.html %}
-        {% include components/tabs.html %}
+        {% include elements/typography.html %} {% include elements/box.html %}
+        {% include elements/button.html %} {% include elements/content.html %}
+        {% include elements/delete.html %} {% include elements/form.html %} {%
+        include elements/icon.html %} {% include elements/images.html %} {%
+        include elements/notifications.html %} {% include elements/progress.html
+        %} {% include elements/table.html %} {% include elements/tag.html %} {%
+        include components/breadcrumb.html %} {% include components/hero.html %}
+        {% include components/card.html %} {% include components/dropdown.html
+        %} {% include components/level.html %} {% include components/media.html
+        %} {% include components/menu.html %} {% include components/message.html
+        %} {% include components/modal.html %} {% include components/navbar.html
+        %} {% include components/pagination.html %} {% include
+        components/panel.html %} {% include components/tabs.html %}
       </div>
     </div>
-  {{ content }}
-  {% include footer.html %}
-</body>
-
+    {{ content }} {% include footer.html %}
+  </body>
 </html>
