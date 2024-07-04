@@ -1,10 +1,30 @@
+// Overrides
+@import "../utilities/mixins.scss";
+@import "initial-variables";
 
 // Overrides
-@import "initial-variables";
-@import "derived-variables";
-@import "mixins";
+
+.hero.is-primary {
+  .title {
+    color: #fff !important;
+  }
+
+  .subtitle {
+    color: #fff !important;
+  }
+}
+
+.title {
+  font-weight: 500 !important;
+  color: $primary-light !important;
+}
+
+.subtitle {
+  font-weight: 300 !important;
+}
+
 .hero {
-  background-color: $black-ter;
+  background-color: $primary;
 }
 
 .delete {
@@ -20,9 +40,9 @@
 }
 
 .notification {
-  @each $name, $pair in $colors {
+  @each $name, $pair in $custom-colors {
     $color: nth($pair, 1);
-    $color-invert: if(length($pair) > 1, nth($pair, 2), $color); // default to $color if second element is not present
+    $color-invert: nth($pair, 2);
 
     &.is-#{$name} {
       a:not(.button) {

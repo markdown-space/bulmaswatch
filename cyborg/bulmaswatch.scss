@@ -1,10 +1,9 @@
+@use "../utilities/setup";
 @use "cyborg";
-@use "setup";
 @use "overrides";
 
 /*! bulmaswatch v0.8.1 | MIT License */
 @import "bulma";
-@import "initial-variables";
 
 :root {
   @include cyborg.dark-theme;

@@ -2,7 +2,9 @@
 // CYBORG
 ////////////////////////////////////////////////
 
+@use "../utilities/functions.scss" as fn;
 @import "../utilities/dark-initial-variables.scss";
+@import "../utilities/derived-variables.scss";
 
 $grey-accent: hsl(0, 0%, 14%);
 $grey-darker: hsl(0, 0%, 21%);
@@ -11,7 +13,7 @@ $grey: hsl(0, 0%, 48%);
 $grey-light: hsl(0, 0%, 71%);
 $grey-lighter: hsl(0, 0%, 86%);
 
-$primary: #2a9fd6 !default;
+$primary: #2a9fd6;
 $primary-light: lighten($primary, 10);
 $link: #3273e2;
 
@@ -89,3 +91,53 @@ $file-cta-background-color: $grey-darker;
 $progress-bar-background-color: $grey-dark;
 
 $panel-heading-background-color: $grey-dark;
+
+$custom-colors: fn.mergeColorMaps(
+  (
+    "white": (
+      $white,
+      $black,
+    ),
+    "black": (
+      $black,
+      $white,
+    ),
+    "light": (
+      $light,
+      $dark,
+    ),
+    "dark": (
+      $dark,
+      $light,
+    ),
+    "text": (
+      transparent,
+      $dark,
+    ),
+    "primary": (
+      $primary,
+      $white,
+    ),
+    "link": (
+      $link,
+      $light,
+    ),
+    "info": (
+      $info,
+      $dark,
+    ),
+    "success": (
+      $success,
+      $light,
+    ),
+    "warning": (
+      $warning,
+      $light,
+    ),
+    "danger": (
+      $danger,
+      $light,
+    ),
+  ),
+  $custom-colors
+);

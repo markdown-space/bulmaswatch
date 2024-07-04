@@ -1,10 +1,10 @@
 @use "sass:list";
 
-@use "css-variables" as cv;
-@use "derived-variables" as dv;
+@use "../utilities/css-variables" as cv;
+@use "../utilities/functions.scss" as fn;
+@use "../utilities/setup";
+@use "../utilities/derived-variables" as dv;
 @use "initial-variables" as iv;
-@use "functions" as fn;
-@use "setup";
 
 // The main lightness of this theme
 $scheme-main-l: 9%;
@@ -29,6 +29,7 @@ $text: hsl(iv.$scheme-h, iv.$scheme-s, $text-l);
 
   @include cv.register-vars(
     (
+      "primary": iv.$primary,
       "scheme-brightness": "dark",
       "scheme-main-l": $scheme-main-l,
       "scheme-main-bis-l": $scheme-main-l + 2%,
