@@ -3,8 +3,7 @@
 ////////////////////////////////////////////////
 
 @use "../utilities/functions.scss" as fn;
-@import "../utilities/dark-initial-variables.scss";
-@import "../utilities/derived-variables.scss";
+@use "../utilities/initial-variables.scss" as iv;
 
 $grey-accent: hsl(0, 0%, 14%);
 $grey-darker: hsl(0, 0%, 21%);
@@ -17,8 +16,19 @@ $primary: #2a9fd6;
 $primary-light: lighten($primary, 10);
 $link: #3273e2;
 
+$black: hsl(221, 14%, 4%) !default;
+$black-bis: hsl(221, 14%, 9%) !default;
+$black-ter: hsl(221, 14%, 14%) !default;
+
 $white: #fff;
 $white-ter: #f5f5f5;
+$light: $white-ter;
+$dark: $grey-darker;
+
+$info: $primary-light;
+$success: #49c774;
+$warning: #ffdd57;
+$danger: #f24667;
 
 $body-background-color: #000;
 $background: $grey-darker;
@@ -92,6 +102,9 @@ $progress-bar-background-color: $grey-dark;
 
 $panel-heading-background-color: $grey-dark;
 
+// Lists and maps
+$color-list: null !default;
+
 $custom-colors: fn.mergeColorMaps(
   (
     "white": (
@@ -132,12 +145,14 @@ $custom-colors: fn.mergeColorMaps(
     ),
     "warning": (
       $warning,
-      $light,
+      #fff,
     ),
     "danger": (
       $danger,
       $light,
     ),
   ),
-  $custom-colors
+  $color-list
 );
+
+$navbar-breakpoint: iv.$desktop !default;

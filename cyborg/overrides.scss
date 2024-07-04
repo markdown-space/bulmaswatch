@@ -1,6 +1,6 @@
 // Overrides
 @import "../utilities/mixins.scss";
-@import "initial-variables";
+@import "variables";
 
 // Overrides
 
@@ -12,6 +12,10 @@
   .subtitle {
     color: #fff !important;
   }
+}
+
+.button {
+  font-weight: 400 !important;
 }
 
 .hero {
