@@ -14,17 +14,13 @@
   }
 }
 
-.title {
-  font-weight: 500 !important;
-  color: $primary-light !important;
-}
-
-.subtitle {
-  font-weight: 300 !important;
-}
-
 .hero {
-  background-color: $primary;
+  background-color: $primary !important;
+
+  .button {
+    background: $white !important;
+    color: $primary !important;
+  }
 }
 
 .delete {
